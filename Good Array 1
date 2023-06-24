@@ -1,0 +1,53 @@
+'''
+An array is good, if it satisfies the following criteria:
+
+If array is of size N, then it should contain all elements from 1 to N.
+
+As a direct consequence of the above statement, the array does not contain duplicate elements.
+
+The array should not be sorted in ascending order.
+
+Given N and elements of the array, your task is to check if it is Good or Not.
+
+Input Format
+
+The first line contains N representing array size. The next line contains N space separated integers representing the elements of array.
+
+Constraints
+
+2<=N<=100 1<=A<=100 where A represents an array element.
+
+Output Format
+
+The output contains a single line. If the array satisfies all the above conditions print "Good", otherwise print "Not Good"
+
+Sample Input 0
+
+4
+1 2 3 4
+Sample Output 0
+
+Not Good
+Explanation 0
+
+The array has all the elements from 1 to 4 and without duplicates. So criteria 1 and 2 are satisfied but the array is sorted. So criteria 3 is failed. So print Not Good.
+'''
+
+SOLUTION---------------------------->>>>>>>>>>>>>>>>>
+
+a,fl=int(input()),0
+l=[int(i) for i in input().split()]
+x=sorted(l)
+for i in l:
+    if i>a:
+        fl=1
+        print('Not Good')
+if fl!=1:
+    if l==x:
+        fl=1
+        print('Not Good')
+    elif len(l)!=len(set(l)):
+        fl=1
+        print('Not Good')
+    elif fl==0:
+        print('Good')
