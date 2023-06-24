@@ -9,7 +9,7 @@ The array should not be sorted in ascending order.
 
 Given N and elements of the array, your task is to check if it is Good or Not.
 
-Input Format
+Input Format 
 
 The first line contains N representing array size. The next line contains N space separated integers representing the elements of array.
 
